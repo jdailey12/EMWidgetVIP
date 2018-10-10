@@ -1,0 +1,13 @@
+{
+  "name": "vapidtest2",
+  "vapid": {},
+  "scripts": {
+    "start": "vapid start ."
+  },
+  "dependencies": {
+    "bcrypt": "^3.0.1",
+    "html2canvas": "^1.0.0-alpha.12",
+    "sqlite3": "^4.0.0",
+    "vapid-cli": "^0.1.26"
+  }
+}
