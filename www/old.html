@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vapid Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=Monoton|Work+Sans:400,800" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/site.css">
+</head>
+<body style="background-image: url({{background_image type=image tag=false required=false}})">
+
+  <header class="header">
+    <h2>A New Site</h2>
+    <h1><span>{{vapid label="Title"}}</span></h1>
+
+    <div class="container">
+      <p>This template already has few tags—visit the dashboard now to edit their content. And when you're done, <a href="https://docs.vapid.com/content-types" target="_blank">add your own content tags</a>.</p>
+      <p><a href="/dashboard" class="login button">Login</a></p>
+      <p><small>Lastly, submit the contact form below.</small></p>
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+      <header>
+        <h2>Contact Yourself</h2>
+        <p>Before submitting this form, <a href="/dashboard">login to the dashboard</a>. We'll send the form submission to the email address you provided when setting up the dashboard, via <a href="http://formspree.io/" target="_blank">Formspree</a>.</p>
+      </header>
+
+      {{#form contact subject="Vapid Example Contact Form"}}
+        {{name}}
+        {{email}}
+        {{message long=true}}
+      {{/form}}
+    </div>
+  </section>
+
+  <section>
+    {{#section widget}}
+    <div class="container">
+      <link href="css/grid-layout.css" rel="stylesheet">
+      <link href="css/style.css" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+      <header>
+        <h2>Contact Yourself</h2>
+        <p>Before submitting this form, <a href="/dashboard">login to the dashboard</a>. We'll send the form submission to the email address you provided when setting up the dashboard, via <a href="http://formspree.io/" target="_blank">Formspree</a>.</p>
+      </header>
+        <script src="jstest/html2canvas.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script type="text/javascript">	$('#fancy-text').keyup(
+        		function(){
+        			var value = $(this).val();
+        			$('.headline').text(value);
+        		}
+        	);
+
+        $('form').submit(function(e){
+        		e.preventDefault;
+            return false;
+        });
+
+        function myRenderFunction(canvas) {
+          var myImage = canvas.toDataURL("image/png");
+          $('.lightbox').fadeIn(200);
+          $('.image').attr('src', myImage).fadeIn(200);
+        }
+
+        $(document).ready(function(){
+
+        	$('button').on('click', function(){
+        		html2canvas($("#widget"), {
+                scale: 6,
+                onrendered: myRenderFunction
+            });
+        	});
+
+        	$('.closebox').on('click', function(){
+        		$('.lightbox').css("display","none");
+        	});
+
+        });
+
+      </script>
+
+
+        <form>
+
+        <button type="button" tabindex="0">Save PNG Image</button>
+        </form>
+
+
+
+
+
+
+      <div id="widget">
+      <div class="grid-container">
+        <div class="metag">
+          <center>
+            <img src="getonline.png" alt="" width="25%">
+            <h1><span>{{Title1}}</span></h1>
+            <h2><span>{{Title2}}</span></h2>
+            <h2><span>{{Title3}}</span></h2>
+            <p>Creat a post at GBYO.com</p>
+            <p>Join us at EveryMerchant.com</p>
+          </center>
+        </div>
+
+        <div class="pic1">
+          <center><h2><span>{{Hashtag1}}</span></h2></center>
+        </div>
+
+        <div class="pic2">
+          <center><h2><span>{{Hashtag2}}</span></h2></center>
+        </div>
+        <div class="pic3">
+          <center><h2><span>{{Hashtag3}}</span></h2></center>
+        </div>
+      </div>
+    </span>
+
+    </div>
+
+    <br>
+
+    <div class="lightbox" style="width: 100%;">
+      <br>
+      <a href="#" class="closebox">&times;</a>
+      <br>
+      <img src="" class="image" width="50%"/>
+    </div>
+
+  <!-- Script -->
+  <script type="text/javascript" src="jstest/html2canvas.min.js"></script>
+
+    {{/section}}
+  </section>
+
+  <footer>
+
+  </footer>
+
+</body>
+</html>
